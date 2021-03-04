@@ -1,0 +1,61 @@
+.header{
+  height: 6rem;
+  padding: 0 8%;
+  background: linear-gradient(0deg, rgba(247,247,255,0) 0%, rgba(247,247,255,0.21192226890756305) 30%, rgba(247,247,255,0.500437675070028) 50%, rgba(247,247,255,0.68531162464986) 65%, rgba(247,247,255,0.8645833333333334) 100%);
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  color: #2e3741;
+
+  .logo{
+    color: #2e3741;
+    font-size: 2rem;
+  }
+}
+
+.menu{
+  text-transform: uppercase;
+}
+
+.space {
+  flex: 1 1 auto;
+}
+
+.active{
+  color: #12161a;
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn-container{
+  position: relative;
+
+  &::after{
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #2e3741;
+    top: 1px;
+    right: 11px;
+    z-index: -1;
+  }
+}
+
+.cart{
+  background-color: transparent;
+}
+
+.qty{
+  position: absolute;
+  top: -6px;
+  right: 15px;
+  font-size: .8rem;
+  color: #fff;
+}
+

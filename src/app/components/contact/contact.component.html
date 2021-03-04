@@ -1,0 +1,47 @@
+  <!-- Background image -->
+  <div class="showcase">
+    <div>
+      <h1 class="title">Kontakta oss.</h1>
+      <p>__________________</p>
+    </div>
+  </div>
+ <!-- Top information -->
+  <div class="container">
+  <mat-list class="card-hero">
+  <!-- Contact Form -->
+    <form #form="ngForm" (submit)="submitForm()">
+      <div class="form-inputs">
+        <h3 class="form-title">Skicka ett meddelande.</h3>
+        <!-- Firstname -->
+          <mat-form-field class="input">
+            <mat-label>Firstname</mat-label>
+            <input matInput placeholder="Firstname" name="Firstname" required [(ngModel)]="firstname">
+          </mat-form-field>
+
+          <!-- Lastname -->
+          <mat-form-field class="input">
+            <mat-label>Lastname</mat-label>
+            <input matInput placeholder="Lastname" name="Lastname" required [(ngModel)]="lastname">
+          </mat-form-field>
+
+          <!-- Email -->
+          <mat-form-field class="input">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" name="Email" required [(ngModel)]="email">
+          </mat-form-field>
+
+        <!-- Message -->
+        <mat-form-field class="input">
+          <mat-label>Message</mat-label>
+          <textarea class="txt" matInput placeholder="Message"></textarea>
+        </mat-form-field>
+      </div>
+      <!-- Submit button -->
+      <button [disabled]="form.invalid" type="submit" class="btn" mat-raised-button>Submit</button>
+    </form>
+    <div class="profil-image">
+      <img width="400px" src="/assets/bilder/creators.jpg" alt="">
+    </div>
+
+  </mat-list>
+</div>

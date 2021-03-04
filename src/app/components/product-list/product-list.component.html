@@ -1,0 +1,28 @@
+<div class="hero">
+
+  <!-- Show a cart preview when you add a product to cart -->
+  <app-cart-preview [style.opacity]="opacity"></app-cart-preview>
+
+  <!-- Background image -->
+  <div class="showcase">
+    <div>
+      <h1 class="title">Örhängen.</h1>
+      <p>__________________</p>
+    </div>
+  </div>
+
+  <!-- Product Cards -->
+  <div class="card-wrapper" >
+    <div class="card" *ngFor="let product of productList" [routerLink]="['/productdetail' , product.id]"><!-- Linking the product id to the product detail. -->
+      <img class="img" width="200px" src="{{product.imageOne}}" alt="{{product.title}}">
+      <div class="content">
+        <h4 class="card-title">{{product.title}}</h4>
+        <p class="price">{{product.price}} SEK</p>
+      </div>
+      <div class="btn-container">
+        <button mat-button class="button" (click)="addToCart(product); $event.stopImmediatePropagation()">Köp</button><!-- Prevent the card from going to details when you press the button -->
+      </div>
+    </div>
+  </div>
+
+</div> <!-- End of hero -->

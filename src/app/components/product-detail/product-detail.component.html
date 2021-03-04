@@ -1,0 +1,36 @@
+<div class="hero">
+
+  <!-- Show a cart preview when you add a product to cart -->
+  <app-cart-preview [style.opacity]="opacity"></app-cart-preview>
+
+  <div class="hero-wrapper" *ngIf="product">
+    <!-- Image gallery -->
+    <div class="image-container">
+      <div class="small-img">
+        <img class="small" [src]="product.imageOne" width="80px" alt="{{product.title}}">
+        <img class="small" [src]="product.imageTwo" width="80px" alt="">
+      </div>
+      <img class="image" width="500px" [src]="product.imageOne" alt="{{product.title}}">
+    </div>
+
+    <!-- Product Infomation -->
+    <section class="product-info-container">
+      <div class="info-wrapper">
+        <h2 class="title">{{product.title}}</h2>
+        <p class="line">__________________</p>
+        <p class="sub-text">{{product.subText}}</p>
+        <div class="info-content">
+          <table>
+            <tr><th>Enhet</th><td>{{product.unit}}</td></tr>
+            <tr><th>Material</th><td>{{product.material}}</td></tr>
+            <tr><th>Färg</th><td>{{product.color}}</td></tr>
+            <tr><th>Storlek</th><td>{{product.size}}</td></tr>
+          </table>
+        </div>
+        <h3 class="price">{{product.price}} KR</h3>
+        <button mat-flat-button type="button" class="btn" (click)="addToCart(product)">Lägg i varukorgen</button>
+      </div>
+    </section>
+
+  </div><!-- End of hero wrapper -->
+</div><!-- End of Hero -->

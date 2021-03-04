@@ -1,0 +1,243 @@
+/* Top section */
+.title-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.title-wrapper{
+  width: 15rem;
+  color: #495867;
+}
+
+.title{
+  text-transform: uppercase;
+  margin-top: 10rem;
+  font-size: 2rem;
+  line-height: .2rem;
+}
+
+/* Emty Cart */
+.empty-cart{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.empty-text{
+  font-size: 1.5rem;
+  color: #b9b9b9;
+}
+
+.empty-link{
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #2f3942;
+  text-decoration: underline;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Card */
+.container{
+  width: 85%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card{
+  position: relative;
+  width: 35rem;
+  margin-right: 2.5rem;
+  margin-bottom: 2rem;
+  padding: .5rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.185);
+}
+
+.content{
+  width: 8rem;
+  padding-top: .5rem;
+}
+
+.card-title{
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+
+.art-nr{
+  color: rgb(110, 110, 110);
+}
+
+.quantity{
+  display: flex;
+  align-items: center;
+}
+
+.minus, .plus{
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+}
+
+.number{
+  font-size: 1rem;
+  border: 2px solid rgb(110, 110, 110);
+  padding: 0 1.3rem;
+  border-radius: 3px;
+}
+
+.far{
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin: .2rem .3rem;
+  color: rgb(87, 87, 87);
+}
+
+.price{
+  margin-top: .9rem;
+  font-size: 1.1rem;
+  width: 5rem;
+}
+
+.delete{
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.fa-plus{
+  transform: rotate(45deg);
+  font-weight: 200;
+  font-size: 1rem;
+  padding: .3rem;
+  color: rgb(182, 182, 182);
+  cursor: pointer;
+}
+
+/* Total sum card */
+.sum-container{
+  width: 25rem;
+  height: 25rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.185);
+  margin-left: 2.5rem;
+}
+
+.sum-title{
+  padding: 1rem 0 1rem 2rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  background-color: #F1F1F1;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+}
+
+th {
+  text-align: left;
+  padding: 8px 0;
+}
+
+td{
+ text-align: right;
+ padding: 8px 0;
+}
+
+.line{
+  border-bottom: 1px solid #dddddd;
+  line-height: 3rem;
+}
+
+.total{
+  padding-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.btn{
+  margin-top: 5rem;
+  text-transform: uppercase;
+  background-color: #495867;
+  color: #fff;
+  letter-spacing: .1rem;
+}
+
+.fa-chevron-right{
+  margin-left: 5px;
+  padding-bottom: 2px;
+}
+
+
+@media screen and (max-width: 1115px){
+  .container{
+    flex-direction: column;
+  }
+
+  .card{
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0;
+
+  }
+
+  .sum-container{
+    width: 100%;
+    height: 20rem;
+    margin-left: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  table {
+    width: 90%;
+  }
+
+  .btn{
+    margin-top: 1.5rem;
+
+  }
+}
+
+@media screen and (max-width: 550px){
+  .container{
+    margin: 2rem auto;
+  }
+  .cart-image{
+    width: 80px;
+  }
+
+  .card{
+    flex-direction: column;
+  }
+
+  .content{
+    width: 100%;
+    text-align: center;
+  }
+
+  .art-nr{
+    display: none;
+  }
+
+  .price{
+    text-align: center;
+  }
+
+  title{
+    font-size: .8rem;
+  }
+
+}

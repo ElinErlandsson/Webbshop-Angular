@@ -1,0 +1,15 @@
+<div class="cart-preview">
+  <h3 class="preview-title">Tilllagd i varukorgen</h3>
+
+  <div class="product-info-card" *ngFor="let item of items">
+    <img class="img" width="80px" [src]=item.imageOne alt="">
+    <div class="info-content">
+      <h5 class="product-name">{{item.title}}</h5>
+      <div class="qty-price-wrapper">
+        <p class="product-qty">Antal: {{item.qty}}</p>
+        <p class="product-price">{{item.price * item.qty}} SEK</p>
+      </div>
+    </div>
+  </div>
+  <button mat-flat-button type="button" class="cart-preview-btn" [routerLink]="['/cart']">Till kassan {{calcTotalPrice()}} SEK</button>
+</div>

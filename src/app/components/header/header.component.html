@@ -1,0 +1,21 @@
+<mat-toolbar class="header">
+  <a routerLink="/home"><h2 class="logo">vaiB</h2></a>
+
+  <span class="space"></span>
+
+  <!-- Navigation -->
+  <nav class="menu">
+    <a mat-button routerLink="/home" routerLinkActive="active">Hem</a>
+    <a mat-button routerLink="/productList" routerLinkActive="active">Produkter</a>
+    <a mat-button routerLink="/contact" routerLinkActive="active">Kontakt</a>
+  </nav>
+  <span class="space"></span>
+
+  <!-- Cart -->
+  <div class="btn-container">
+    <div class="qty">{{calcTotal()}}</div>
+    <a mat-flat-button class="cart" routerLink="/cart"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+
+</mat-toolbar>
+

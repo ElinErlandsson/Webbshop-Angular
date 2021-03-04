@@ -1,0 +1,123 @@
+/* Background image */
+.showcase{
+  height: 20rem;
+  width: 100%;
+  background-image: url('/assets/bilder/bg-weave.jpg');
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.title{
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: .5rem;
+}
+
+.container{
+  width: 83%;
+  margin: 0 auto;
+  padding: 4rem 0rem 7rem;
+}
+
+.card-hero{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* Form */
+.form-inputs{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-title{
+  text-transform: uppercase;
+}
+
+.input{
+  width: 30rem;
+  margin-right: 5rem;
+}
+
+.btn{
+  margin-top: 2rem;
+  font-size: .7rem;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.profil-image{
+  position: relative;
+  width: 400px;
+  height: 450px;
+
+  &:before{
+    position: absolute;
+    content: '';
+    width: 400px;
+    height: 450px;
+    top: 20px;
+    left: 40px;
+    background-color: #F7F7FF;
+    z-index: -1;
+  }
+}
+
+
+@media screen and (max-width: 1100px){
+  .card-hero{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .profil-image{
+    margin-bottom: 5rem;
+  }
+
+  .input{
+    margin-right: 0rem;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+
+  .showcase{
+    height: 14rem;
+  }
+
+  .title{
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+
+  img{
+    width: 300px;
+  }
+
+  .profil-image{
+    width: 300px;
+    height: 350px;
+
+    &:before{
+      width: 300px;
+      height: 350px;
+      top: 5px;
+      left: 20px;
+    }
+  }
+
+  .input{
+    width: 20rem;
+  }
+}

@@ -1,0 +1,63 @@
+<div class="cart-container">
+  <!-- Top Section -->
+    <div class="title-container">
+      <div class="title-wrapper">
+        <h1 class="title">Din varukorg.</h1>
+        <p class="title-line">__________________</p>
+      </div>
+    </div>
+
+    <!-- If Cart is empty show this -->
+    <div *ngIf="items.length === 0" class="empty-cart">
+      <h3 class="empty-text">Din varukorg är tom...</h3>
+      <h3 class="empty-link" routerLink="/productList">Börja handla!</h3>
+    </div>
+
+    <!-- If cart has products show this -->
+    <div class="container" *ngIf="items.length > 0">
+
+      <!-- Product card -->
+      <div class="card-wrapper">
+        <div class="card" [@fadeOut] *ngFor="let item of items; let i = index">
+          <div class="img-wrapper">
+            <img class="cart-image" width="130px" src="{{item.imageOne}}" alt="earing">
+          </div>
+          <div class="content">
+            <h4 class="card-title">{{item.title}}</h4>
+            <p class="art-nr">Art.nr {{item.artnr}}</p>
+          </div>
+          <div class="quantity">
+            <button type="button" class="minus" (click)="decrementQty(item)"><i class="far fa-minus-square"></i></button>
+            <div class="number">{{item.qty}}</div>
+            <button type="button" class="plus" (click)="incrementQty(item)"><i class="far fa-plus-square"></i></button>
+          </div>
+          <h3 class="price">{{item.price * item.qty}} KR</h3>
+          <button class="delete" type="button" (click)="deleteItem(i)"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+
+      <!-- Total sum card -->
+      <div class="total-sum-wrapper">
+        <div class="sum-container">
+          <h2 class="sum-title">Totalsumma</h2>
+          <table>
+            <tr>
+              <th>Delsumma</th>
+              <td>{{calcTotalPrice()}} KR</td>
+            </tr>
+            <tr>
+              <th class="line">Frakt</th>
+              <td class="line">Gratis</td>
+            </tr>
+            <tr>
+              <th class="total">Totalsumma (inkl.moms)</th>
+              <td class="total">{{calcTotalPrice()}} KR</td>
+            </tr>
+            <button class="btn" mat-flat-button>Till kassan<i class="fas fa-chevron-right"></i></button>
+          </table>
+        </div>
+      </div>
+
+    </div><!-- End of product container -->
+
+  </div><!-- End of Cart container -->

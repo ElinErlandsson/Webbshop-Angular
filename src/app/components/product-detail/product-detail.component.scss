@@ -1,0 +1,153 @@
+.hero{
+  width: 85%;
+  padding-top: 10rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.hero-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+/* Images */
+.image-container{
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.small-img{
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+.small{
+  margin-bottom: 1rem;
+}
+
+/* Product Information */
+.product-info-container{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.info-wrapper{
+  width: 23rem;
+}
+.title{
+  text-transform: uppercase;
+  line-height: .1rem;
+  font-size: 1.1rem;
+}
+
+.sub-text{
+  padding: .5rem 0;
+  color: #484848;
+}
+
+.info-content{
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+th {
+  text-align: left;
+  padding: 8px 0;
+}
+
+td{
+ text-align: right;
+ padding: 8px 0;
+}
+
+.price{
+  text-align: right;
+  font-size: 1.2rem;
+}
+
+.btn{
+  text-transform: uppercase;
+  background-color: #495867;
+  color: #fff;
+  width: 100%;
+  padding: .2rem 0;
+}
+
+
+@media screen and (max-width: 1115px){
+  .hero{
+    position: relative;
+    padding-top: 5rem;
+  }
+
+  .hero-wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container{
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .small-img{
+    flex-direction: row;
+    margin-right: 0rem;
+    margin-bottom: 5rem;
+  }
+
+  .small{
+    margin-left: 1rem;
+  }
+
+  .product-info-container{
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .info-wrapper{
+    width: 100%;
+  }
+
+  .btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+
+  }
+
+  .price{
+    position: fixed;
+    bottom: 0.3rem;
+    right: 3.5rem;
+    z-index: 3;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .image{
+    width: 300px;
+  }
+
+  .price{
+    font-size: 1rem;
+    right: 1rem;
+  }
+
+  .btn{
+    font-size: 1rem;
+  }
+}
